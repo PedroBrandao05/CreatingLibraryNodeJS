@@ -8,7 +8,12 @@ const arrayResult = [
 
 describe('catchFiles::', () => {
     it('Must return a result array', async () => {
-        const result = await catchFiles('C:\/Users\/userlocal\/Downloads\/2299-lib-nodejs-markdown-aula-5\/2299-lib-nodejs-markdown-aula-5\/test\/arquivos_teste\/texto1teste.md');
+        const result = await catchFiles('test\/arquivos_teste\/texto1teste.md');
         expect(result).toEqual(arrayResult);
     })
+    it('Must return message "No links in here"', async () => {
+       const result = await 
+       catchFiles('C:\/cursoNODE\/CreatingLibraryNodeJS\/test\/arquivos_teste\/texto1_sem_links.md')
+       expect(result).toBe('No links in here')})
 })
+gi
